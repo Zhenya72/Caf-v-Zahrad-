@@ -1,0 +1,23 @@
+:root {
+  /* Colors */
+  --primary-color: #8B4513;
+  --primary-dark: #654321;
+  --primary-light: #A0522D;
+  --secondary-color: #D2691E;
+  --accent-color: #CD853F;
+  
+  --text-dark: #333333;
+  --text-medium: #666666;
+  --text-light: #999999;
+  --text-white: #fff;
+  
+  --bg-primary: #fff;
+  --bg-secondary: rgba(240, 237, 228);
+  --bg-dark: #333333;
+  
+  --border-color: #E0E0E0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Typography */
+  --font-family-primary: 'Manrope', serif;
+}

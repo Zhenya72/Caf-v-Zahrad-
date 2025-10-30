@@ -1,0 +1,41 @@
+.button{
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--primary-light);
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .button {
+        padding: 0.65rem 1.4rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 768px) {
+    .button {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .button {
+        display: block;
+        width: 100%;
+        padding: 0.8rem;
+    }
+}

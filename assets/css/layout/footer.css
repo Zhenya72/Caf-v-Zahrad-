@@ -1,0 +1,141 @@
+footer{
+    background-color: var(--text-medium);
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-white);
+}
+
+.footer-content-up{
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-content-up p{
+    max-width: 450px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+
+.footer-content-down{
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-block{
+    margin-bottom: 1.5rem;
+}
+
+.footer-block h3, .footer-block p{
+    color: var(--text-white);
+    margin-bottom: 1.5rem;
+}
+
+.footer-block a {
+    text-decoration: none;
+    color: var(--text-white);
+}
+
+.footer-block a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-block-content{
+    margin-bottom: 1.5rem;
+}
+
+.footer-block-content p{
+    font-weight: 300;
+    margin-bottom: 0rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: transparent;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    color: var(--text-white);  
+}
+
+.social-link:hover,
+.social-link:focus {
+    background: var(--primary-light);
+    outline: none;
+}
+
+.map-frame {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .footer-content-down {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .right-column {
+        grid-column: 1 / -1; 
+    }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 768px) {
+    .footer-content-down {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-content-up {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .footer-content-up p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-block h3, .footer-block p {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+}

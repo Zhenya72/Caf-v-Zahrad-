@@ -1,0 +1,107 @@
+header {
+    position: relative;
+    color: var(--text-white);
+    min-height: 60vh;         
+    overflow: hidden;
+}
+
+header > .container {
+    display: flex;
+    flex-direction: column; 
+    height: 100%;           
+    gap: 0;
+}
+
+header > .container > nav {
+    z-index: 3;            
+    flex: 0 0 auto;       
+    width: 100%;
+}
+
+.head-text {
+    flex: 1 1 auto;        
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center;
+    text-align: center;
+    padding: clamp(1rem, 4vw, 3rem); 
+    z-index: 2;
+}
+
+.head-text h1 {
+    max-width: 95%;
+    word-break: keep-all;   
+    white-space: nowrap;   
+    margin-bottom: 0;
+}
+
+.head-text p {
+    margin-top: 0.6rem;
+    max-width: 80ch;
+}
+
+
+/* Tablets */
+@media (max-width: 992px) {
+    header { 
+      min-height: 48vh; 
+      background-position: center top; 
+    }
+
+    .head-text h1 {
+        font-size: clamp(1.8rem, 6vw, 3rem);
+    }
+
+    .head-text p { 
+      max-width: 70%; 
+    }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 768px) {
+    header { 
+      min-height: 42vh; 
+      background-position: center top; 
+    }
+
+    .head-text {
+      padding: 1.2rem;
+    }
+
+    .head-text h1 {
+      max-width: 95%;
+    }
+
+    .head-text p { 
+      max-width: 90%; 
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    header { 
+      min-height: 36vh; 
+    }
+}
+
+/* Print */
+@media print {
+    header {
+        background: none !important;
+        color: #000 !important;
+        height: auto !important;
+        position: relative !important;
+        padding: 1rem 0;
+    }
+
+    .head-text h1 {
+        position: static !important;
+        transform: none !important;
+        text-align: center;
+        font-size: 2rem;
+        color: #000 !important;
+        white-space: normal !important;
+        margin-bottom: 1rem;
+    }
+}

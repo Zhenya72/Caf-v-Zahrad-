@@ -1,0 +1,86 @@
+@import url('../variables.css');
+@import url('../reset.css');
+@import url('../components/nav.css');
+@import url('../components/faq.css');
+@import url('../base/typography.css');
+@import url('../base/buttons.css');
+@import url('../layout/header.css');
+@import url('../layout/footer.css');
+
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../../images/menu/menu_bg.jpg')  center center / cover no-repeat;
+}
+
+/* Menu-preview */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.menu-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .menu-grid {
+        gap: 20px;
+    }
+
+    .menu-item img {
+        height: 200px;
+    }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .menu-item img {
+        height: auto;
+    }
+}
+
+/* Print */
+@media print {
+    header {
+        background: none !important;
+    }
+    
+    .menu-grid {
+        display: block !important;
+        gap: 1rem !important;
+    }
+
+    .menu-item {
+        overflow: visible !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        page-break-inside: avoid; 
+        margin-bottom: 1rem;
+    }
+
+    .menu-item::after {
+        content: attr(data-lang-alt);
+        display: block;
+        font-weight: bold;
+        font-size: 12pt;
+        margin-top: 0.5rem;
+        color: #000;
+    }
+}

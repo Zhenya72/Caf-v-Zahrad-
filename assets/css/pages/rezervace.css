@@ -1,0 +1,138 @@
+@import url('../variables.css');
+@import url('../reset.css');
+@import url('../components/nav.css');
+@import url('../components/faq.css');
+@import url('../base/typography.css');
+@import url('../base/buttons.css');
+@import url('../layout/header.css');
+@import url('../layout/footer.css');
+
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../../images/rezervace/rezervace_bg.jpg')  center center / cover no-repeat;
+}
+
+/* Reservation */
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--bg-dark);
+    outline: none;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .reservation-form {
+        max-width: 90%;
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 9px 12px;
+    }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 768px) {
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .reservation-form {
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+}
+
+/* Print */
+@media print {
+    header {
+        background: none !important;
+    }
+
+    .section-subtitle {
+        text-align: left; 
+    }
+
+    .reservation-form {
+        max-width: 100%;
+        display: block;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        font-size: 12pt;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        border: 1px solid #000 !important; 
+        border-radius: 0 !important;
+        padding: 6px;
+        font-size: 12pt;
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+    }
+}
